@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyCollege</string>
+    <string-array name="tabs">
+        <item>MBA</item>
+        <item>MCA</item>
+        <item>Commerce</item>
+    </string-array>
 </resources>

@@ -16,7 +16,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".DepartmentsActivity" />
+        <activity android:name=".Tabs.Mba" />
+        <activity android:name=".Tabs.Mca" />
+        <activity android:name=".Tabs.Commerce"></activity>
     </application>
 
 </manifest>
