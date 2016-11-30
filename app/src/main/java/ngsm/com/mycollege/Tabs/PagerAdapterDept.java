@@ -8,15 +8,13 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  * Created by Rishi on 11/29/2016.
  */
 public class PagerAdapterDept extends FragmentStatePagerAdapter {
+    private String tabTitles[]=new String[]{"MBA","MCA","Commerce"};
 
-    //integer to count number of tabs
-    int tabCount;
 
     //Constructor to the class
     public PagerAdapterDept(FragmentManager fm, int tabCount) {
         super(fm);
         //Initializing tab count
-        this.tabCount= tabCount;
     }
 
     //Overriding method getItem
@@ -38,9 +36,14 @@ public class PagerAdapterDept extends FragmentStatePagerAdapter {
         }
     }
 
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return tabTitles[position];
+    }
+
     //Overriden method getCount to get the number of tabs
     @Override
     public int getCount() {
-        return tabCount;
+        return tabTitles.length;
     }
 }

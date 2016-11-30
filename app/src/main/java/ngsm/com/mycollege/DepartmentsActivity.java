@@ -7,6 +7,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+
 import ngsm.com.mycollege.Tabs.PagerAdapterDept;
 
 
@@ -52,6 +53,7 @@ public class DepartmentsActivity extends AppCompatActivity implements TabLayout.
 
         //Adding adapter to pager
         viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setupWithViewPager(viewPager);
 
         //Adding onTabSelectedListener to swipe views
