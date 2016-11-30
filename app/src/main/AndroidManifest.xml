@@ -20,7 +20,8 @@
         <activity android:name=".DepartmentsActivity" />
         <activity android:name=".Tabs.Mba" />
         <activity android:name=".Tabs.Mca" />
-        <activity android:name=".Tabs.Commerce"></activity>
+        <activity android:name=".Tabs.Commerce" />
+        <activity android:name=".HostelActivity"></activity>
     </application>
 
 </manifest>
