@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivMba"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/clg_building"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description about Commerce"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/tvMBA" />
+
+</LinearLayout>

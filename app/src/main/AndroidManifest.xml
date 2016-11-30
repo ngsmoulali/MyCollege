@@ -8,16 +8,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".SplashScreen"
-            >
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".DepartmentsActivity" />
+        <activity android:name=".Tabs.Mba" />
+        <activity android:name=".Tabs.Mca" />
+        <activity android:name=".Tabs.Commerce"></activity>
     </application>
 
 </manifest>
