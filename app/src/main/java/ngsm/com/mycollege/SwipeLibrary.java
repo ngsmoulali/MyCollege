@@ -9,17 +9,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 /**
- * Created by Rishi on 11/30/2016.
+ * Created by Rishi on 12/4/2016.
  */
-public class SwipeHostel extends PagerAdapter {
-    private int[] img_resources={R.drawable.hostels_1,R.drawable.canteen};
+public class SwipeLibrary extends PagerAdapter {
+    private int[] img_resources = {R.drawable.svu_library, R.drawable.library_2, R.drawable.library_3, R.drawable.library_4};
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public SwipeHostel(Context context){
-        this.context=context;
+    public SwipeLibrary(Context context) {
+        this.context = context;
 
     }
+
     @Override
     public int getCount() {
         return img_resources.length;
@@ -28,14 +29,14 @@ public class SwipeHostel extends PagerAdapter {
     @Override
     public boolean isViewFromObject(View view, Object o) {
 
-        return (view==(LinearLayout)o);
+        return (view == (LinearLayout) o);
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        layoutInflater=(LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View item_view=layoutInflater.inflate(R.layout.swipe_layout,container,false);
-        ImageView ivSwipe=(ImageView)item_view.findViewById(R.id.ivSwipe);
+        layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        View item_view = layoutInflater.inflate(R.layout.swipe_layout, container, false);
+        ImageView ivSwipe = (ImageView) item_view.findViewById(R.id.ivSwipe);
         ivSwipe.setImageResource(img_resources[position]);
         container.addView(item_view);
         return item_view;
@@ -43,7 +44,6 @@ public class SwipeHostel extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((LinearLayout)object);
+        container.removeView((LinearLayout) object);
     }
 }
-
