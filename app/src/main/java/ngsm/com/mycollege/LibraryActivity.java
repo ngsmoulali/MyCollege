@@ -7,6 +7,8 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import ngsm.com.mycollege.Adapter.SwipeLibrary;
+
 public class LibraryActivity extends AppCompatActivity {
     ViewPager viewPager;
     SwipeLibrary adapter;

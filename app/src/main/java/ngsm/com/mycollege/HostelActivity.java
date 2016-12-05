@@ -7,6 +7,8 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import ngsm.com.mycollege.Adapter.SwipeHostel;
+
 public class HostelActivity extends AppCompatActivity {
     ViewPager viewPager;
     SwipeHostel adapter;

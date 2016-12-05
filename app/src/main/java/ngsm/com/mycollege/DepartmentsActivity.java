@@ -8,7 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 
-import ngsm.com.mycollege.Tabs.PagerAdapterDept;
+import ngsm.com.mycollege.Adapter.PagerAdapterDept;
 
 
 public class DepartmentsActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener{

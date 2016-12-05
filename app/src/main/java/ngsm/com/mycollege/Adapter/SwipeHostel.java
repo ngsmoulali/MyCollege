@@ -1,4 +1,4 @@
-package ngsm.com.mycollege;
+package ngsm.com.mycollege.Adapter;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import ngsm.com.mycollege.R;
 
 /**
  * Created by Rishi on 11/30/2016.

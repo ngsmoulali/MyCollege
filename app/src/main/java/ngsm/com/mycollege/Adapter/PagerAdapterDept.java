@@ -1,8 +1,12 @@
-package ngsm.com.mycollege.Tabs;
+package ngsm.com.mycollege.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import ngsm.com.mycollege.Tabs.Commerce;
+import ngsm.com.mycollege.Tabs.Mba;
+import ngsm.com.mycollege.Tabs.Mca;
 
 /**
  * Created by Rishi on 11/29/2016.
