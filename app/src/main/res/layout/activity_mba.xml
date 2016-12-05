@@ -11,6 +11,10 @@
         android:src="@drawable/clg_building"
         android:layout_margin="15dp"/>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,5 +22,11 @@
         android:layout_gravity="center"
         android:textAlignment="center"
         android:id="@+id/tvMBA" />
+    </ScrollView>
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="10dp"
+        android:id="@+id/Faculty"
+        android:text="Facultymba"/>
 
 </LinearLayout>
