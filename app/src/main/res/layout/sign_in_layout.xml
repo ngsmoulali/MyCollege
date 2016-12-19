@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_in_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ngsm.com.mycollege.SignInActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/etSignInId"
+        android:hint="Enter Your Id" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/etSignInId"
+        android:layout_alignLeft="@+id/etSignInId"
+        android:layout_alignStart="@+id/etSignInId"
+        android:id="@+id/etSignInPassword"
+        android:hint="Enter Your Password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etSignInPassword"
+        android:layout_centerHorizontal="true"
+        tools:text="Sign In"
+        android:id="@+id/btnSignIn" />
+
+</RelativeLayout>

@@ -36,7 +36,7 @@ public class PlacementActivity extends AppCompatActivity {
                 if(position == 0){
                     startActivity(new Intent(getBaseContext(), PlacementHistoryActivity.class));
                 } else {
-                    startActivity(new Intent(getBaseContext(), LibraryActivity.class));
+                    startActivity(new Intent(getBaseContext(), TieUpCompaniesActivity.class));
                 }
             }
         });

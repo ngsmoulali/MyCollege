@@ -7,20 +7,20 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import ngsm.com.mycollege.Adapter.SwipeLibrary;
+import ngsm.com.mycollege.Adapter.SwipeHostel;
 
-public class LibraryActivity extends AppCompatActivity {
+public class HostelActivity extends AppCompatActivity {
     ViewPager viewPager;
-    SwipeLibrary adapter;
+    SwipeHostel adapter;
     int count = 0;
     Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_library);
-        viewPager=(ViewPager)findViewById(R.id.vpLibrary);
-        adapter=new SwipeLibrary(this);
+        setContentView(R.layout.activity_hostel);
+        viewPager=(ViewPager)findViewById(R.id.vpHostel);
+        adapter=new SwipeHostel(this);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
 
