@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/placement_history_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ngsm.com.mycollege.PlacementHistoryActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Company Name"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="No of Students"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Company Name"
+                android:textSize="25dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tvCompanyName"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tvYear"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="No of Students"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+
+                android:id="@+id/tvStudents"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

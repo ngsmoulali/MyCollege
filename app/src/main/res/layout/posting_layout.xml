@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/posting_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ngsm.com.mycollege.PostingActivity">
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/editbox_dropdown_light_frame"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ibtnPostImage"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ibtnPostImage"
+        android:padding="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Post Title..."
+            android:background="@drawable/input_outline"
+            android:padding="15dp"
+            android:ems="10"
+            android:id="@+id/etPostTitle" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:background="@drawable/input_outline"
+            android:padding="15dp"
+            android:id="@+id/etPostDescription"
+            android:hint="Post Description..."/>
+
+        <Button
+            android:text="Submit Post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSubmitPost"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>
