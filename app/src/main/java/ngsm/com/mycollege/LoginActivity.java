@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                 StudentDetails studentDetails = dataSnapshot.getValue(StudentDetails.class);
                 String password = studentDetails.getPassword();
                 if(metPassword.getText().toString().equals(password)){
-                    startActivity(new Intent(getBaseContext(), MainProfileActivity.class));
+                    startActivity(new Intent(getBaseContext(), PostActivity.class));
                 } else {
                     metPassword.setError("Wrong Password");
                 }

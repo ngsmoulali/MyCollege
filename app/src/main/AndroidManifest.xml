@@ -17,7 +17,8 @@
         <activity android:name=".DepartmentsActivity" />
         <activity android:name=".HostelActivity" />
         <activity android:name=".LibraryActivity" />
-        <activity android:name=".FacultyActivity" />
+        <activity android:name=".FacultyActivity" >
+        </activity>
         <activity android:name=".ContactUsActivity" />
         <activity android:name=".PlacementActivity" />
         <activity android:name=".PlacementHistoryActivity" />
@@ -29,14 +30,16 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".PostActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".PostingActivity" />
-        <activity android:name=".SignInActivity"></activity>
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".HomePageActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>
