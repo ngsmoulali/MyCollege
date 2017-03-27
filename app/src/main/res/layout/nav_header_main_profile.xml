@@ -14,15 +14,14 @@
 
     <ImageView
         android:id="@+id/ivProfileImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        android:layout_width="66dp"
+        android:layout_height="82dp"
+        android:src="@drawable/profilepic"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
+        android:paddingTop="5dp"
         android:text="Student Name"
         android:id="@+id/tvStudentName"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -31,12 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Student Id"
+        android:paddingTop="3dp"
         android:id="@+id/tvStudentId" />
-
-    <TextView
-        android:id="@+id/tvStudentEmailId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Student Email Id" />
 
 </LinearLayout>

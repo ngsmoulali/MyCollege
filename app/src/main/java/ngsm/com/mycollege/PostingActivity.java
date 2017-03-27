@@ -99,6 +99,7 @@ public class PostingActivity extends AppCompatActivity {
                     mProgress.dismiss();
 
                     startActivity(new Intent(PostingActivity.this, PostActivity.class));
+                    finish();
 
                 }
             });

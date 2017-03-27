@@ -2,6 +2,7 @@ package ngsm.com.mycollege;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -19,7 +21,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import static ngsm.com.mycollege.LoginActivity.LOGOUT;
+
 public class PostActivity extends AppCompatActivity {
+
+    private SharedPreferences sharedPreferences;
+
+    private String logout;
 
     private RecyclerView mPostList;
 
@@ -28,12 +36,13 @@ public class PostActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
+    private ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.post_layout);
-
-       /* mAuth = FirebaseAuth.getInstance();
+        /*mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -55,36 +64,62 @@ public class PostActivity extends AppCompatActivity {
         mPostList.setHasFixedSize(true);
         mPostList.setLayoutManager(new LinearLayoutManager(this));
 
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        mPostList.setVisibility(View.GONE);
+
+        progressBar.setVisibility(View.VISIBLE);
+
+        sharedPreferences = getSharedPreferences(LOGOUT,MODE_PRIVATE);
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        //mAuth.addAuthStateListener(mAuthListener);
+        logout = sharedPreferences.getString(LOGOUT, null);
 
-        FirebaseRecyclerAdapter<Post, PostViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Post, PostViewHolder>(
+        if(LOGOUT.equals(logout)){
 
-                Post.class,
-                R.layout.post_row,
-                PostViewHolder.class,
-                mDatabase
+            startActivity(new Intent(getBaseContext(),LoginActivity.class));
+            finish();
 
-        ) {
-            @Override
-            protected void populateViewHolder(PostViewHolder viewHolder, Post model, int position) {
+        }
 
-                viewHolder.setTitle(model.getTitle());
-                viewHolder.setDesc(model.getDesc());
-                viewHolder.setImage(getApplicationContext(), model.getImage());
+        else
 
-            }
-        };
+        {
 
-        mPostList.setAdapter(firebaseRecyclerAdapter);
+            //mAuth.addAuthStateListener(mAuthListener);
+
+            FirebaseRecyclerAdapter<Post, PostViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Post, PostViewHolder>(
+
+                    Post.class,
+                    R.layout.post_row,
+                    PostViewHolder.class,
+                    mDatabase
+
+            ) {
+                @Override
+                protected void populateViewHolder(PostViewHolder viewHolder, Post model, int position) {
+
+                    viewHolder.setTitle(model.getTitle());
+                    viewHolder.setDesc(model.getDesc());
+                    viewHolder.setImage(getApplicationContext(), model.getImage());
+
+                }
+            };
+
+            mPostList.setAdapter(firebaseRecyclerAdapter);
+
+            progressBar.setVisibility(View.GONE);
+
+            mPostList.setVisibility(View.VISIBLE);
+
+        }
 
     }
-
 
     public static class PostViewHolder extends RecyclerView.ViewHolder{
 
@@ -120,8 +155,6 @@ public class PostActivity extends AppCompatActivity {
 
     }
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -139,4 +172,5 @@ public class PostActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

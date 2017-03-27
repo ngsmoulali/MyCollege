@@ -1,11 +1,13 @@
 package ngsm.com.mycollege;
 
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 
 import ngsm.com.mycollege.Adapter.PagerAdapterDept;
@@ -74,4 +76,23 @@ public class DepartmentsActivity extends AppCompatActivity implements TabLayout.
     public void onTabReselected(TabLayout.Tab tab) {
 
     }
+
+    public void mbaFaculty(View view){
+
+        startActivity(new Intent(getBaseContext(), MbaFacultyActivity.class));
+
+    }
+
+    public void mcaFaculty(View view){
+
+        startActivity(new Intent(getBaseContext(), McaFacultyActivity.class));
+
+    }
+
+    public void commerceFaculty(View view){
+
+        startActivity(new Intent(getBaseContext(), CommerceFacultyActivity.class));
+
+    }
+
 }

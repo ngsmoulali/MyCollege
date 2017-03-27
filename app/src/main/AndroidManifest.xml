@@ -3,6 +3,7 @@
     package="ngsm.com.mycollege">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".Util.AppController"
@@ -11,14 +12,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".DepartmentsActivity" />
         <activity android:name=".HostelActivity" />
         <activity android:name=".LibraryActivity" />
-        <activity android:name=".FacultyActivity" >
-        </activity>
+        <activity android:name=".FacultyActivity" />
         <activity android:name=".ContactUsActivity" />
         <activity android:name=".PlacementActivity" />
         <activity android:name=".PlacementHistoryActivity" />
@@ -29,16 +35,20 @@
             android:label="@string/title_activity_main_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".PostActivity">
-        </activity>
+        <activity android:name=".PostActivity" />
         <activity android:name=".PostingActivity" />
         <activity android:name=".SignInActivity" />
-        <activity android:name=".HomePageActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".McaFacultyActivity" />
+        <activity android:name=".MbaFacultyActivity" />
+        <activity android:name=".CommerceFacultyActivity" />
+        <activity android:name=".PracticeActivity" />
+        <activity android:name=".NoticeBoardActivity" >
+        </activity>
+        <activity android:name=".EditableNoticeBoardActivity">
+        </activity>
+        <activity android:name=".NBLoginActivity" />
+        <activity android:name=".EditNoticeBoardActivity">
         </activity>
     </application>
 

@@ -9,6 +9,7 @@ public class StudentDetails {
     private String name;
     private String email;
     private String password;
+    private String image;
 
     public StudentDetails() {
     }
@@ -17,6 +18,13 @@ public class StudentDetails {
         this.name = name;
         this.email = email;
         this.password = password;
+    }
+
+    public StudentDetails(String name, String email, String password, String image) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.image = image;
     }
 
     public String getName() {
@@ -41,5 +49,13 @@ public class StudentDetails {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

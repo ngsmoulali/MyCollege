@@ -16,4 +16,5 @@ public class Mba extends Fragment {
 
         return inflater.inflate(R.layout.activity_mba, container, false);
     }
+
 }
